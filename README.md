@@ -95,6 +95,10 @@ analysing the LaTeX sources of the manuscripts in
 is reproduced: every word and every formula in these templates is written for
 the template itself.
 
+## See also
+
+The writing corpus and protocol behind these conventions: [math-paper-writing](https://github.com/XXXXXXQ-0206/math-paper-writing).
+
 ## Licence
 
 Apache License 2.0 — see [LICENSE](LICENSE).

@@ -79,6 +79,10 @@ latexmk -pdf main.tex        # 或：pdflatex、bibtex、pdflatex、pdflatex
 （Apache-2.0）手稿 LaTeX 源码的分析。**未复制任何手稿正文**：模板里的每一句话、
 每一个公式都是为模板本身编写的。
 
+## 相关仓库
+
+这些约定背后的写作语料与生成协议：[math-paper-writing](https://github.com/XXXXXXQ-0206/math-paper-writing)。
+
 ## 许可
 
 Apache License 2.0 —— 见 [LICENSE](LICENSE)。
