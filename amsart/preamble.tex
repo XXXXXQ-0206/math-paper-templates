@@ -1,0 +1,68 @@
+% =====================================================================
+%  preamble.tex -- AMS-style variant.
+%  amsart already supplies theorem environments (thm, lem, prop, cor,
+%  defn, rem, conj, ...) and handles \title / \author / \date / abstract
+%  itself, so this preamble is much shorter than the article one.
+% =====================================================================
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
+\usepackage{geometry}
+\geometry{a4paper,margin=30mm}
+\usepackage{microtype}
+\usepackage{graphicx,booktabs,array}
+\usepackage{enumitem}
+\setlist{itemsep=3pt,topsep=5pt}
+\usepackage{xcolor}
+\definecolor{linkblue}{RGB}{31,70,105}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathmorphing,fit}
+
+% hyperref must come after everything else that defines commands.
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,
+            urlcolor=linkblue]{hyperref}
+\usepackage[capitalise,noabbrev,nameinlink]{cleveref}
+
+\numberwithin{equation}{section}
+
+% amsart numbers theorem-like environments continuously (1, 2, 3, ...).
+% Uncomment the next line to number them within the section instead.
+% \numberwithin{thm}{section}
+
+% Convenience aliases so the AMS environment names read like the
+% article-style names used elsewhere in this collection.
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{convention}[theorem]{Convention}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+
+\allowdisplaybreaks[2]
+
+% Project macros.
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}

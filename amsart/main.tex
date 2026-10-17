@@ -1,0 +1,51 @@
+% =====================================================================
+%  main.tex -- AMS-style manuscript.
+%  Note the AMS ordering: abstract goes BEFORE \maketitle, and
+%  \subjclass / \keywords come after \maketitle.
+%  Build with:  pdflatex main; bibtex main; pdflatex main; pdflatex main
+% =====================================================================
+\documentclass[11pt,reqno]{amsart}
+\input{preamble}
+
+% Short forms in the optional argument drive the running head.
+\title[Short running title]{A General Reusable AMS-Style Manuscript Template}
+
+% \NoCaseChange protects bracketed or initial-only author names from the
+% small-caps running head that amsart applies.
+\author{\NoCaseChange{[OI]}}
+\date{\today}
+
+% In amsart, \subjclass and \keywords must be set BEFORE \maketitle:
+% \maketitle emits them as the administrative footnotes of page 1.
+% Setting them afterwards leaves them as loose body text.
+\subjclass[2020]{Primary 00A00; Secondary 00A01}
+\keywords{template, manuscript, AMS style}
+
+\begin{document}
+
+% In amsart the abstract is typeset BEFORE \maketitle.
+\begin{abstract}
+This template reproduces the AMS-flavoured manuscripts in the
+collection: the \texttt{amsart} class with \texttt{reqno}, an abstract
+placed before \texttt{\textbackslash maketitle}, AMS subject
+classification and keywords, and \texttt{amsplain} bibliography style.
+Replace this text with one self-contained paragraph stating the
+problem, the main result, and its significance.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+\clearpage
+
+\input{sections/introduction}
+\input{sections/geometry}
+\input{sections/conclusion}
+
+\appendix
+\input{sections/appendix}
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+
+\end{document}

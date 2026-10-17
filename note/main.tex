@@ -1,0 +1,96 @@
+% =====================================================================
+%  main.tex -- short note.
+%  Everything lives in this one file: no sections/ directory, no
+%  separate preamble, no table of contents. Use this for manuscripts up
+%  to roughly fifteen pages whose argument does not divide into
+%  independent parts.
+%  Build with:  pdflatex main; bibtex main; pdflatex main; pdflatex main
+% =====================================================================
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem,booktabs,array}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{linkblue}{RGB}{25,65,105}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,
+            urlcolor=linkblue]{hyperref}
+\usepackage[capitalise,noabbrev,nameinlink]{cleveref}
+
+\numberwithin{equation}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+\title{A Short Note Template}
+\author{[OI]}
+\date{\today}
+
+\hypersetup{pdftitle={A Short Note Template},pdfauthor={[OI]}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+A short note states one result and proves it. There is no table of
+contents, no separate preamble file, and no appendix unless a single
+deferred computation genuinely needs one. Replace this text with one
+self-contained paragraph giving the problem, the result, and its
+significance.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+
+State the problem and the result. In a note, the literature discussion
+is one or two sentences, not a survey: name the closest prior result
+\cite{example-classical} and say what is new here.
+
+\begin{theorem}[Main theorem]
+\label{thm:main}
+Let $X$ be a compact metric space and let $\mu$ be a Borel probability
+measure on $X$. For every $f \in L^2(\mu)$,
+\begin{equation}
+\label{eq:main}
+  \int_X f \dd\mu \le \norm{f}_{L^2(\mu)} .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Apply Cauchy--Schwarz to the pairing of $f$ with the constant function
+$1$ and use $\mu(X) = 1$.
+\end{proof}
+
+\begin{remark}
+\label{rem:sharp}
+The constant in \cref{eq:main} is attained by $f = \mathbf{1}_X$.
+\end{remark}
+
+\section{Consequences}
+\label{sec:consequences}
+
+A note may have a short second section for immediate corollaries, but
+it should not accumulate machinery. If a second section needs its own
+definitions and standing conventions, the material belongs in the
+standard article template instead.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

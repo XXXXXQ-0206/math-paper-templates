@@ -1,0 +1,37 @@
+% ---------------------------------------------------------------------
+% sections/introduction.tex
+% ---------------------------------------------------------------------
+
+\section{Introduction}
+\label{sec:introduction}
+
+State the problem, fix the notation, and state the main theorem.
+Then place the result against the literature with citations such as
+\cite{example-classical} and \cite{example-modern}, saying precisely
+which hypothesis is relaxed.
+
+\begin{theorem}[Main theorem]
+\label{thm:main}
+Let $X$ be a compact metric space and let $\mu$ be a Borel probability
+measure on $X$. Then
+\begin{equation}
+\label{eq:main}
+  \int_X f \dd\mu \le \norm{f}_{L^2(\mu)}
+\end{equation}
+for every $f \in L^2(\mu)$.
+\end{theorem}
+
+\begin{proof}
+Apply Cauchy--Schwarz to the pairing of $f$ with the constant function
+$1$, using $\mu(X) = 1$.
+\end{proof}
+
+\begin{remark}
+\label{rem:scope}
+The compactness hypothesis is used only to guarantee that
+$L^2(\mu)$ is separable.
+\end{remark}
+
+The remainder of the paper is organised as follows.
+\Cref{sec:geometry} proves the supporting estimate, and
+\Cref{sec:conclusion} records consequences.

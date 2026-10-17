@@ -1,0 +1,34 @@
+% ---------------------------------------------------------------------
+% principal/sections/00-introduction.tex
+% ---------------------------------------------------------------------
+
+\section{Introduction}
+\label{sec:introduction}
+
+State the principal theorem. Then explain how the family is organised:
+which part of the argument is self-contained here, and which part is
+delegated to a companion. Name the companion explicitly and cite it.
+
+The technical input we need is the estimate of \cite{companion-a},
+which we use in the form restated below. A second, independent line of
+argument appears in \cite{companion-b}; we do not use it here, but it
+gives the same conclusion under weaker hypotheses on the constants.
+
+\begin{theorem}[Principal theorem]
+\label{thm:principal}
+Let $X$ be a compact metric space and let $\mu$ be a Borel probability
+measure on $X$. For every $f \in L^2(\mu)$,
+\begin{equation}
+\label{eq:principal}
+  \int_X f \dd\mu \le \norm{f}_{L^2(\mu)} .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Use the companion estimate \cite[Theorem 3.2]{companion-a} to reduce to
+the case of bounded $f$, then apply Cauchy--Schwarz.
+\end{proof}
+
+The rest of this manuscript proves the reductions that
+\cref{thm:principal} needs. \Cref{sec:main-result} carries out the main
+argument, and \Cref{sec:conclusion} records consequences.

@@ -1,0 +1,41 @@
+% =====================================================================
+%  principal/main.tex -- principal manuscript of the family.
+% =====================================================================
+\documentclass[11pt]{article}
+\input{preamble}
+
+\title{A Principal Result, with Companions}
+\author{[OI]}
+\date{\today}
+
+\hypersetup{
+  pdftitle={A Principal Result, with Companions},
+  pdfauthor={[OI]}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is the principal manuscript of a manuscript family. State the
+problem, the main result, and its significance in one paragraph. Then
+say, in a second sentence, which companion manuscripts carry the
+supporting arguments, so a reader knows where to go next. Replace this
+text.
+\end{abstract}
+
+\tableofcontents
+\clearpage
+
+\input{sections/00-introduction}
+\input{sections/01-main-result}
+\input{sections/02-conclusion}
+
+\appendix
+\input{sections/90-appendix}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

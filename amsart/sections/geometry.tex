@@ -1,0 +1,25 @@
+% ---------------------------------------------------------------------
+% sections/geometry.tex
+% ---------------------------------------------------------------------
+
+\section{Supporting estimate}
+\label{sec:geometry}
+
+\begin{lemma}
+\label{lem:aux}
+Let $g \in L^\infty(\mu)$ with $\norm{g}_{L^\infty} \le 1$. Then
+\begin{equation}
+\label{eq:aux}
+  \abs{\int_X g \dd\mu} \le 1 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Bound the integrand pointwise by $1$ and use $\mu(X) = 1$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Approximate $f$ in $L^2(\mu)$ by bounded functions, apply
+\cref{lem:aux} to the normalised approximants, and pass to the limit
+using \cref{eq:aux}.
+\end{proof}

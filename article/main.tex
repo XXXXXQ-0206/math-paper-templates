@@ -1,0 +1,67 @@
+% =====================================================================
+%  main.tex -- root file of the standard manuscript template.
+%  Build with:  latexmk -pdf main.tex
+% =====================================================================
+\documentclass[11pt]{article}
+\input{preamble}
+
+% ---------------------------------------------------------------------
+% Title block. Keep \title / \author / \date short; the abstract lives
+% in the document body below.
+% ---------------------------------------------------------------------
+\title{A General Reusable Manuscript Template}
+\author{[OI]}
+\date{\today}
+
+\hypersetup{
+  pdftitle={A General Reusable Manuscript Template},
+  pdfauthor={[OI]}
+}
+
+\begin{document}
+
+\maketitle
+
+% ---------------------------------------------------------------------
+% Abstract: one paragraph, no citations, no cross-references.
+% State (a) the problem, (b) the result, (c) why it is new.
+% ---------------------------------------------------------------------
+\begin{abstract}
+This template reproduces the dominant manuscript conventions of the
+openai/math preprint collection: an article class at 11\,pt, a modular
+preamble, one shared theorem counter, numbered sections split across
+the sections/ directory, and a BibTeX bibliography. Replace the text of
+this abstract with a single self-contained paragraph stating the
+problem, the main result, and its significance. Do not cite or
+cross-reference anything here.
+\end{abstract}
+
+% A table of contents is optional; include it for manuscripts longer than
+% roughly fifteen pages, and omit it for short notes.
+\tableofcontents
+\clearpage
+
+% ---------------------------------------------------------------------
+% Body: one \input per section, in reading order.
+% File names are zero-padded so they sort in the intended order.
+% ---------------------------------------------------------------------
+\input{sections/00-introduction}
+\input{sections/01-preliminaries}
+\input{sections/02-main-result}
+\input{sections/03-conclusion}
+
+% ---------------------------------------------------------------------
+% Appendices are optional. \appendix switches section numbering to A, B, ...
+% ---------------------------------------------------------------------
+\appendix
+\input{sections/90-appendix}
+
+% ---------------------------------------------------------------------
+% Bibliography: BibTeX against references.bib.
+% Use \bibliographystyle{plainnat} plus \usepackage{natbib} in the
+% preamble if you need author-year citations.
+% ---------------------------------------------------------------------
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

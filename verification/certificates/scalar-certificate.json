@@ -1,0 +1,33 @@
+{
+  "identities": [
+    {
+      "exact": true,
+      "label": "sample-sum",
+      "lhs": "1/2",
+      "lhs_decimal": 0.5,
+      "rhs": "1/2"
+    },
+    {
+      "exact": true,
+      "label": "sample-product",
+      "lhs": "2/3",
+      "lhs_decimal": 0.6666666666666666,
+      "rhs": "2/3"
+    },
+    {
+      "exact": true,
+      "label": "sample-power",
+      "lhs": "16/81",
+      "lhs_decimal": 0.19753086419753085,
+      "rhs": "16/81"
+    }
+  ],
+  "power_comparison": {
+    "exact": true,
+    "label": "3**40-vs-2**64",
+    "lhs_digits": 20,
+    "relation": "<",
+    "rhs_digits": 20
+  },
+  "wall_seconds": 6.7e-05
+}

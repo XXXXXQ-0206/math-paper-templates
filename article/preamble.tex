@@ -1,0 +1,94 @@
+% =====================================================================
+%  preamble.tex -- shared preamble for the standard manuscript style.
+%  Derived from the dominant conventions of the openai/math preprint set:
+%  \documentclass[11pt]{article}, modular \input of sections/, one shared
+%  theorem counter, BibTeX with \bibliographystyle{plain}.
+% =====================================================================
+
+% ---------- 1. Encoding, fonts, page geometry ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+
+% ---------- 2. Mathematics ----------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+% ---------- 3. Layout, lists, tables, figures ----------
+\usepackage{needspace}
+\usepackage{enumitem,booktabs,array}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% ---------- 4. Cross-references and links ----------
+\definecolor{linkblue}{RGB}{25,65,105}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,
+            urlcolor=linkblue,breaklinks=true]{hyperref}
+\usepackage[capitalise,noabbrev,nameinlink]{cleveref}
+
+% ---------- 5. Numbering: equations and theorems ----------
+\numberwithin{equation}{section}
+
+% "theorem" owns the counter and is numbered within the section;
+% every other environment shares it, so results read Theorem 2.1,
+% Lemma 2.2, Proposition 2.3, ... in one running sequence.
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{convention}[theorem]{Convention}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{construction}[theorem]{Construction}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{claim}[theorem]{Claim}
+
+% ---------- 6. Page-break hygiene ----------
+% Keep a few lines together before subsections and before each
+% theorem-like environment, so a statement never starts on the last
+% line of a page.
+\AddToHook{cmd/subsection/before}{\Needspace{9\baselineskip}}
+\AddToHook{env/theorem/before}{\Needspace{2\baselineskip}}
+\AddToHook{env/lemma/before}{\Needspace{2\baselineskip}}
+\AddToHook{env/proposition/before}{\Needspace{2\baselineskip}}
+\AddToHook{env/corollary/before}{\Needspace{2\baselineskip}}
+\AddToHook{env/definition/before}{\Needspace{2\baselineskip}}
+\AddToHook{env/remark/before}{\Needspace{2\baselineskip}}
+\allowdisplaybreaks[2]
+
+% ---------- 7. Lists and table of contents ----------
+\setlist{itemsep=2pt,topsep=5pt}
+\setcounter{tocdepth}{2}
+
+% ---------- 8. Project-specific macros ----------
+% Number sets. Extend or prune freely.
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+
+% Operators.
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+
+% Utility macros used across the sample sections.
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\emphterm}[1]{\emph{#1}}

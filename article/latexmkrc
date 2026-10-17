@@ -1,0 +1,5 @@
+# latexmk configuration for the standard manuscript template.
+$pdf_mode = 1;              # produce PDF via pdflatex
+$bibtex_use = 2;            # always run bibtex
+$pdf_previewer = "";        # no viewer: run non-interactively
+$clean_ext = "bbl blg synctex.gz run.xml bcf";

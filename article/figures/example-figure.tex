@@ -1,0 +1,25 @@
+% ---------------------------------------------------------------------
+% figures/example-figure.tex
+% A TikZ figure kept in its own file so the section sources stay
+% readable. Include it from a section with \input{figures/example-figure}.
+% ---------------------------------------------------------------------
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+      node distance=14mm,
+      box/.style={draw=linkblue, thick, rounded corners=1.5pt,
+                  inner sep=4pt, minimum height=8mm, align=center,
+                  font=\small},
+      arr/.style={-{Stealth[length=2mm]}, thick, draw=linkblue}
+    ]
+    \node[box] (a) {statement};
+    \node[box, right=of a] (b) {estimate};
+    \node[box, right=of b] (c) {conclusion};
+    \draw[arr] (a) -- (b);
+    \draw[arr] (b) -- (c);
+  \end{tikzpicture}
+  \caption{A sample diagram. Captions are complete sentences ending in
+    a period, and the figure is referenced from the text as
+    \cref{fig:sample}.}
+  \label{fig:sample}
+\end{figure}

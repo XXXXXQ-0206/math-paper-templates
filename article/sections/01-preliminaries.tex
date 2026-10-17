@@ -1,0 +1,65 @@
+% ---------------------------------------------------------------------
+% 01-preliminaries.tex
+% Definitions, standing conventions, and imported tools.
+% Keep this section lean: only what later sections actually use.
+% ---------------------------------------------------------------------
+
+\section{Preliminaries}
+\label{sec:preliminaries}
+
+\subsection{Standing conventions}
+\label{sec:conventions}
+
+Record here every convention a reader could reasonably get wrong:
+which direction a map is written in, whether rings are commutative,
+whether a "smooth" object is assumed second countable, and so on.
+A convention stated once and referenced thereafter is better than a
+hypothesis repeated in five theorems.
+
+\begin{convention}[Standing assumptions]
+\label{conv:standing}
+Throughout, let $X$ be a locally compact Hausdorff space and let
+$\mu$ be a Radon measure on $X$. All vector spaces are over $\R$
+unless stated otherwise.
+\end{convention}
+
+\subsection{Definitions}
+
+\begin{definition}[Sample notion]
+\label{def:sample}
+Call a function $f \colon X \to \R$ \emphterm{admissible} if it is
+continuous, $\mu$-integrable, and satisfies
+\begin{equation}
+\label{eq:admissibility}
+  \int_X \abs{f} \dd\mu < \infty
+  \quad\text{and}\quad
+  \norm{f}_{L^\infty} \le 1 .
+\end{equation}
+\end{definition}
+
+The two conditions in \cref{eq:admissibility} are independent; neither
+implies the other on a general measure space. The following elementary
+fact is used repeatedly, so we isolate it.
+
+\begin{lemma}[Uniform bound]
+\label{lem:uniform-bound}
+Let $f$ be admissible in the sense of \cref{def:sample}. Then for
+every $x \in X$,
+\begin{equation}
+\label{eq:uniform-bound}
+  \abs{f(x)} \le \sup_{y \in X} \abs{f(y)} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Immediate from the definition of the supremum. The point of recording
+it is that \cref{eq:uniform-bound} is uniform in $x$, which is what
+\cref{thm:main} needs.
+\end{proof}
+
+\begin{remark}
+\label{rem:prelim-remark}
+Remarks are numbered in the shared sequence, so \cref{rem:prelim-remark}
+can be referenced like any other result. Use remarks for genuine
+caveats, not for restating the preceding proof.
+\end{remark}

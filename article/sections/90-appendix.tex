@@ -1,0 +1,26 @@
+% ---------------------------------------------------------------------
+% 90-appendix.tex
+% Routine verifications that would interrupt the main argument.
+% \appendix in main.tex renumbers sections as A, B, ...
+% ---------------------------------------------------------------------
+
+\section{Sample appendix}
+\label{app:sample-appendix}
+
+\subsection{Deferred computation}
+
+Collect here the computations that are mechanical but long: changes of
+variables, sign checks, bookkeeping of constants. Keep each one
+self-contained, with its hypotheses restated, so a reader can check it
+without rereading the body.
+
+\begin{lemma}
+\label{lem:appendix}
+With the notation of \cref{sec:main-result}, the constant in
+\cref{eq:main} is sharp.
+\end{lemma}
+
+\begin{proof}
+Exhibit a sequence of admissible functions for which the ratio of the
+two sides tends to $1$. Details are routine.
+\end{proof}

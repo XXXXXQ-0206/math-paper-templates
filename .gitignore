@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.pdf
+*.bbl
+*.blg
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bcf
+*.run.xml
+.verification-output/

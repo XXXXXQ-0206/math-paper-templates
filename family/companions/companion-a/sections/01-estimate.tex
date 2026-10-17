@@ -1,0 +1,20 @@
+% ---------------------------------------------------------------------
+% companions/companion-a/sections/01-estimate.tex
+% ---------------------------------------------------------------------
+
+\section{Proof of the estimate}
+\label{sec:estimate}
+
+\begin{lemma}
+\label{lem:pointwise}
+For $\mu$-almost every $x$, $\abs{f(x)} \le \norm{f}_{L^\infty(\mu)}$.
+\end{lemma}
+
+\begin{proof}
+This is the definition of the essential supremum.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:support}]
+Integrate the pointwise bound of \cref{lem:pointwise} against the
+probability measure $\mu$.
+\end{proof}

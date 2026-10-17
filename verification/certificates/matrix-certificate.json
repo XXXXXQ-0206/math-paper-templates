@@ -1,0 +1,15 @@
+{
+  "determinant": {
+    "exact": true,
+    "expected": "8",
+    "label": "sample-3x3",
+    "value": "8"
+  },
+  "rank": {
+    "exact": true,
+    "expected": 2,
+    "label": "singular-3x3",
+    "value": 2
+  },
+  "wall_seconds": 0.000228
+}

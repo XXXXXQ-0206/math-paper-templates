@@ -1,0 +1,66 @@
+% ---------------------------------------------------------------------
+% 02-main-result.tex
+% The main theorem and its proof, plus the supporting lemmas the proof
+% needs. State the theorem, prove the supporting results, then prove the
+% theorem itself.
+% ---------------------------------------------------------------------
+
+\section{Main result}
+\label{sec:main-result}
+
+\begin{theorem}[Main theorem]
+\label{thm:main}
+Let $X$ be a locally compact Hausdorff space and let $\mu$ be a Radon
+measure on $X$. Suppose $f \colon X \to \R$ is admissible. Then
+\begin{equation}
+\label{eq:main}
+  \int_X f \dd\mu \;\le\; \mu(X)^{1/2}\left(\int_X f^2 \dd\mu\right)^{1/2}.
+\end{equation}
+Moreover, equality holds in \cref{eq:main} if and only if $f$ is
+$\mu$-almost everywhere constant on the set where it is nonzero.
+\end{theorem}
+
+Before proving \cref{thm:main} we record the auxiliary estimate that
+drives the argument.
+
+\begin{proposition}[Auxiliary estimate]
+\label{prop:aux}
+Under the hypotheses of \cref{thm:main}, for every $\varepsilon > 0$
+there exists a compactly supported admissible $g$ with
+\begin{equation}
+\label{eq:aux}
+  \norm{f - g}_{L^2(\mu)} < \varepsilon .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Approximate $f$ from below by simple functions, then truncate the
+support to a set of finite measure. The truncation is admissible by
+\cref{lem:uniform-bound}, and \cref{eq:aux} follows by monotone
+convergence. This is the only place where $\sigma$-finiteness of
+$\mu$ is used.
+\end{proof}
+
+\input{figures/example-figure}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Apply Cauchy--Schwarz to the pairing $\ip{f}{\mathbf{1}_X}$:
+\[
+  \int_X f \dd\mu
+  = \ip{f}{\mathbf{1}_X}
+  \le \norm{f}_{L^2}\,\norm{\mathbf{1}_X}_{L^2}
+  = \left(\int_X f^2 \dd\mu\right)^{1/2} \mu(X)^{1/2},
+\]
+which is \cref{eq:main}. Approximate $f$ by the compactly supported
+$g$ produced by \cref{prop:aux} and pass to the limit to reduce the
+equality statement to the standard equality case of Cauchy--Schwarz.
+\end{proof}
+
+\begin{corollary}
+\label{cor:consequence}
+If in addition $\mu(X) = 1$ then $\int_X f \dd\mu \le \norm{f}_{L^2}$.
+\end{corollary}
+
+\begin{proof}
+Specialise \cref{thm:main} to $\mu(X) = 1$.
+\end{proof}

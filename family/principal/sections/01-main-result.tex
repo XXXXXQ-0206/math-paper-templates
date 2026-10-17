@@ -1,0 +1,23 @@
+% ---------------------------------------------------------------------
+% principal/sections/01-main-result.tex
+% ---------------------------------------------------------------------
+
+\section{The main argument}
+\label{sec:main-result}
+
+\begin{proposition}
+\label{prop:reduction}
+It suffices to prove \cref{eq:principal} for bounded $f$.
+\end{proposition}
+
+\begin{proof}
+Approximate an unbounded $f$ in $L^2(\mu)$ by its truncations
+$f \wedge n$; the truncated functions are bounded, and the bound is
+uniform by \cite[Lemma 2.1]{companion-a}.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:principal}]
+By \cref{prop:reduction} we may assume $f$ bounded. Cauchy--Schwarz
+applied to the pairing with the constant function $1$ gives
+\cref{eq:principal}, using $\mu(X) = 1$.
+\end{proof}
