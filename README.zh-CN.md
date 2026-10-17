@@ -81,7 +81,7 @@ latexmk -pdf main.tex        # 或：pdflatex、bibtex、pdflatex、pdflatex
 
 ## 相关仓库
 
-这些约定背后的写作语料与生成协议：[math-paper-writing](https://github.com/XXXXXXQ-0206/math-paper-writing)。
+这些约定背后的写作语料与生成协议：[math-paper-writing](https://github.com/XXXXXQ-0206/math-paper-writing)。
 
 ## 许可
 

@@ -97,7 +97,7 @@ the template itself.
 
 ## See also
 
-The writing corpus and protocol behind these conventions: [math-paper-writing](https://github.com/XXXXXXQ-0206/math-paper-writing).
+The writing corpus and protocol behind these conventions: [math-paper-writing](https://github.com/XXXXXQ-0206/math-paper-writing).
 
 ## Licence
 
